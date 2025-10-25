@@ -177,7 +177,7 @@ def transcribir_audio_groq(message: telebot.types.Message) -> Optional[str]:
 # ==============================
 company_data = cargar_dataset()
 if company_data:
-    print(f"Dataset cargado correctamente. Total de registros: {len(company_data)}")
+    print(f"👍 Dataset cargado correctamente. Total de registros: {len(company_data)}")
 else:
     print("No se pudo cargar el dataset correctamente.")
 
@@ -230,7 +230,7 @@ def manejar_audio(message):
 # EJECUCION DEL PROGRAMA
 # ==============================
 if __name__ == "__main__":
-    print("Bot de Telegram IA")
+    print("🤖 Bot de Telegram IA")
     while True:
         try:
             bot.polling(none_stop=True, interval=0, timeout=20)
