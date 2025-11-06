@@ -5,3 +5,6 @@ TELEGRAM_TOKEN= ingrese su clave API de Telegram
 GROQ_API_KEY= ingrese su clave API de Groq.env
 .env
 .env
+
+__pycache__/
+*.pyc

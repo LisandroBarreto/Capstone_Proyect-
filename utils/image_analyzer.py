@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from PIL import Image
 import io
 import requests
-
+from config.config import TELEGRAM_TOKEN, GROQ_API_KEY
 
 load_dotenv()
 
@@ -34,6 +34,7 @@ def imagen_a_base64(ruta_o_bytes_imagen):
         else:
             with open(ruta_o_bytes_imagen, "rb") as archivo_imagen:
                 return base64.b64encode(archivo_imagen.read()).decode('utf-8')
+            
     except Exception as e:
         print(f"Error al convertir imagen a base64: {e}")
         return None
@@ -64,98 +65,7 @@ def describir_imagen_con_groq(imagen_base64):
             max_tokens=1000
         )
         return completado_chat.choices[0].message.content
+    
     except Exception as e:
         print(f"Error al describir imagen con Groq: {e}")
         return None
-
-
-@bot.message_handler(commands=['start'])
-
-def enviar_bienvenida(mensaje):
-    texto_bienvenida = """
-¡Hola! 👋 Soy un bot que puede describir imágenes para ti.
-
-🖼️ **¿Cómo funciono?**
-Simplemente envíame una imagen y yo te daré una descripción detallada de lo que veo.
-
-🤖 **Tecnología:**
-Utilizo Groq AI para analizar las imágenes y generar descripciones precisas.
-
-📸 **¡Pruébame!**
-Envía cualquier imagen y verás lo que puedo hacer.
-
-Para obtener ayuda, usa el comando /help
-    # Cierra el string multi-línea y termina la asignación a texto_bienvenida
-    """
-    bot.reply_to(mensaje, texto_bienvenida)   
-
-
-@bot.message_handler(commands=['help'])
-
-def enviar_ayuda(mensaje):
-    texto_ayuda = """
-🔧 **Comandos disponibles:**
-
-/start - Iniciar el bot
-/help - Mostrar esta ayuda
-
-📸 **¿Cómo usar el bot?**
-
-1. Envía una imagen (foto, dibujo, captura, etc.)
-2. Espera unos segundos mientras proceso la imagen
-3. Recibirás una descripción detallada de lo que veo
-
-💡 **Consejos:**
-- Las imágenes más claras y nítidas generan mejores descripciones
-- Puedo analizar fotos, dibujos, gráficos, capturas de pantalla, etc.
-- Respondo en español siempre
-
-❓ **¿Problemas?**
-Si algo no funciona, intenta enviar la imagen de nuevo.
-    # Cierra el string multi-línea
-    """
-    bot.reply_to(mensaje, texto_ayuda)   
-
-
-@bot.message_handler(content_types=['photo'])
-
-def manejar_foto(mensaje):
-    try:
-        bot.reply_to(mensaje, "📸 He recibido tu imagen. Analizándola... ⏳")
-        foto = mensaje.photo[-1]
-        info_archivo = bot.get_file(foto.file_id)
-        archivo_descargado = bot.download_file(info_archivo.file_path)
-        imagen_base64 = imagen_a_base64(archivo_descargado)
-        if not imagen_base64:
-            bot.reply_to(mensaje, "❌ Error al procesar la imagen. Intenta de nuevo.")
-            return
-        descripcion = describir_imagen_con_groq(imagen_base64)
-        if descripcion:
-            respuesta = f"🤖 **Descripción de la imagen:**\n\n{descripcion}"
-            bot.reply_to(mensaje, respuesta, parse_mode='Markdown')
-        else:
-            bot.reply_to(mensaje, "❌ No pude analizar la imagen. Por favor, intenta con otra imagen.")
-    except Exception as e:
-        print(f"Error al procesar la imagen: {e}")
-        bot.reply_to(mensaje, "❌ Ocurrió un error al procesar tu imagen. Intenta de nuevo.")
-
-
-@bot.message_handler(func=lambda mensaje: True)
-
-def manejar_otros_mensajes(mensaje):
-    bot.reply_to(mensaje, """
-📝 Solo puedo procesar imágenes por ahora.
-
-📸 **Envía una imagen** y te daré una descripción detallada de ella.
-
-💡 Usa /help para ver todos los comandos disponibles.
-    # Cierra el string multi-línea y la llamada a reply_to
-    """)
-
-if __name__ == '__main__':
-    print("🤖 Bot de descripción de imágenes iniciado...")
-    print("📸 Esperando imágenes para describir...")
-    try:
-        bot.polling(none_stop=True)
-    except Exception as e:
-        print(f"Error al iniciar el bot: {e}")
