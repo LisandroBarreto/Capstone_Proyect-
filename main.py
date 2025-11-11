@@ -96,7 +96,7 @@ def analyze_sentiment_bert(text):
     raw_label = result['label'].lower() 
     score = result['score']
     
-    CONFIDENCE_THRESHOLD = 0.85
+    CONFIDENCE_THRESHOLD = 0.97
     
     # Lógica de Mapeo
     if raw_label == 'positive': 
