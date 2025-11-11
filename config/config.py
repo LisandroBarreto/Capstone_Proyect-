@@ -8,7 +8,7 @@ load_dotenv()
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-DATASET_PATH = "data.json"
+DATASET_PATH = os.path.join(os.path.dirname(__file__), "c:/Proyecto_final/Capstone_Proyect/data/data.json")
 PRODUCTOS = "productos.json"
 
 

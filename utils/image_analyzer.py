@@ -1,30 +1,8 @@
-import os
 import base64
-import telebot
-from groq import Groq
-from dotenv import load_dotenv
 from PIL import Image
 import io
 import requests
-from config.config import TELEGRAM_TOKEN, GROQ_API_KEY
-
-load_dotenv()
-
-
-TOKEN_BOT_TELEGRAM = os.getenv('TELEGRAM_TOKEN')
-CLAVE_API_GROQ = os.getenv('GROQ_API_KEY')
-
-
-if not TOKEN_BOT_TELEGRAM:
-    raise ValueError("TELEGRAM_BOT_TOKEN no está configurado en las variables de entorno")
-
-
-if not CLAVE_API_GROQ:
-    raise ValueError("GROQ_API_KEY no está configurado en las variables de entorno")
-
-
-bot = telebot.TeleBot(TOKEN_BOT_TELEGRAM)
-cliente_groq = Groq(api_key=CLAVE_API_GROQ)
+from config.config import groq_client
 
 
 def imagen_a_base64(ruta_o_bytes_imagen):
@@ -42,14 +20,14 @@ def imagen_a_base64(ruta_o_bytes_imagen):
 
 def describir_imagen_con_groq(imagen_base64):
     try:
-        completado_chat = cliente_groq.chat.completions.create(
+        completado_chat = groq_client.chat.completions.create(
             messages=[
                 {
                     "role": "user",
                     "content": [
                         {
                             "type": "text",
-                            "text": "Por favor, describe esta imagen de manera detallada y clara en español. Incluye todos los elementos importantes que veas en la imagen, facturas de pagos o deudas, recibos de pagos o deudas, tickets de pagos o deudas, con énfacis en los datos del lugar de origen y el destinatario del recibo juntos con su monto de dinero a pagar o ya pagado de la factura, ticket y cualquier detalle relevante que puedas observar."
+                            "text": "Por favor, describe esta imagen de manera detallada y clara en español. Incluye todos los elementos importantes que veas en la imagen, facturas de pagos o deudas, recibos de pagos o deudas, tickets de pagos o deudas, con énfacis en los datos del lugar de origen y el destinatario del recibo juntos con su monto de dinero a pagar o ya pagado de la factura, ticket y cualquier detalle relevante que puedas observar. No utilices signos de puntuacion extraños y la estructura debe ser simple y legible"
                         },
                         {
                             "type": "image_url",

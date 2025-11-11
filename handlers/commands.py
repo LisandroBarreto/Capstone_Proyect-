@@ -41,7 +41,7 @@ def manejar_foto(mensaje):
         descripcion = describir_imagen_con_groq(imagen_base64)
         if descripcion:
             respuesta = f"🤖 **Descripción de la imagen:**\n\n{descripcion}"
-            bot.reply_to(mensaje, respuesta, parse_mode='Markdown')
+            bot.reply_to(mensaje, respuesta, parse_mode=None)
         else:
             bot.reply_to(mensaje, "❌ No pude analizar la imagen. Por favor, intenta con otra imagen.")
 

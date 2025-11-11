@@ -1,13 +1,9 @@
 from typing import Optional
-from groq import Groq
 import json
 import os 
 import telebot
-from config.config import TELEGRAM_TOKEN, GROQ_API_KEY
+from config.config import bot, groq_client
 
-
-bot = telebot.TeleBot(TELEGRAM_TOKEN)
-groq_client = Groq(api_key=GROQ_API_KEY)
 
 # Genera una respuesta usando Groq (modelo Llama) y system_prompt en caso de que el bot telegram no encuentre alguna respuesta.
 def respuesta_groq(mensaje: str, company_data) -> Optional[str]:
