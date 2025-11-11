@@ -17,7 +17,6 @@ __pycache__/
 *.log
 
 backup_mio/
-
 .vscode/
 .idea/
 
