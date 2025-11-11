@@ -6,7 +6,7 @@ from telegram import Update
 from telegram.ext import Application, MessageHandler, filters, ContextTypes
 
 #  CONFIGURACIÓN DE CREDENCIALES 
-TELEGRAM_TOKEN = "8261224762:AAEwy68XYFHZYSFYxdDihSysPlW2ofzj4OA" 
+TELEGRAM_TOKEN = "TELEGRAM_TOKEN" 
 
 #  FUNCIÓN DE CARGA DE RESPUESTAS JSON 
 def cargar_respuestas(ruta_archivo="respuestas.json"):
