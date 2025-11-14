@@ -3,7 +3,7 @@ from PIL import Image
 import io
 import requests
 from config.config import groq_client
-
+from utils.logger import logger
 
 def imagen_a_base64(ruta_o_bytes_imagen):
     try:
@@ -20,6 +20,7 @@ def imagen_a_base64(ruta_o_bytes_imagen):
 
 def describir_imagen_con_groq(imagen_base64):
     try:
+        logger.info("🧾 Analizando imagen recibida con Groq")
         completado_chat = groq_client.chat.completions.create(
             messages=[
                 {

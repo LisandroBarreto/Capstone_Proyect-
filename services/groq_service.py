@@ -1,14 +1,18 @@
+#services/groq_service.py
+
 from typing import Optional
 import json
 import os 
 import telebot
 from config.config import bot, groq_client
+from utils.logger import logger
 
 
 # Genera una respuesta usando Groq (modelo Llama) y system_prompt en caso de que el bot telegram no encuentre alguna respuesta.
 def respuesta_groq(mensaje: str, company_data) -> Optional[str]:
     try:
-        system_prompt = f"""Eres el ChatBot de AI assistants. Tu tarea es responder preguntas basándote ÚNICAMENTE en la siguiente información de la empresa. 
+        logger.info(f"Analizando pregunta con Groq: {mensaje}")
+        system_prompt = f"""Eres el ChatBot que tiene conocimienteo sobre economia y finanzas. Tu tarea es responder preguntas basándote ÚNICAMENTE en la siguiente información de la empresa. 
 Si te preguntan algo que no está en estos datos, indica amablemente que no puedes proporcionar esa información y sugiere contactar directamente con la empresa.
 
 Datos de la empresa:

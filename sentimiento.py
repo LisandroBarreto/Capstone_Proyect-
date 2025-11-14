@@ -4,12 +4,12 @@ import random
 from transformers import pipeline
 from telegram import Update
 from telegram.ext import Application, MessageHandler, filters, ContextTypes
+from config.config import TELEGRAM_TOKEN, RESPUESTAS
 
 #  CONFIGURACIÓN DE CREDENCIALES 
-TELEGRAM_TOKEN = "TELEGRAM_TOKEN" 
 
 #  FUNCIÓN DE CARGA DE RESPUESTAS JSON 
-def cargar_respuestas(ruta_archivo="respuestas.json"):
+def cargar_respuestas(ruta_archivo=RESPUESTAS):
     """Carga el diccionario de respuestas desde un archivo JSON."""
     try:
         with open(ruta_archivo, 'r', encoding='utf-8') as f:
@@ -167,72 +167,66 @@ def analyze_sentiment_bert(text):
 
 # MANEJADOR DE TEXTO DE TELEGRAM 
 async def text_sentiment_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Maneja los mensajes, clasifica la intención (simulada), analiza el sentimiento y da ánimo."""
-    
+    """Maneja los mensajes, clasifica intención y sentimiento, pero el análisis solo lo ve el admin."""
+
+    ADMIN_CHAT_ID = 590123456  # <-- REEMPLAZAR CON TU CHAT ID
+
     user_text = update.message.text
-    
+    user = update.message.from_user
+
     if not user_text:
         await update.message.reply_text(RESPUESTAS_AUTOMATICAS.get("FALLBACK", "Error de respuesta."))
         return
-    
-    await update.message.reply_text("⏳ Procesando intención y sentimiento...")
 
-    # 1. Clasificación de Intención 
+    await update.message.reply_text("⏳ Procesando...")
+
+    # 1. Clasificación de intención
     intencion_detectada = clasificar_intencion_simulada(user_text)
 
-    # 2. Generación de Respuesta Automática
+    # 2. Respuesta automática
     respuesta_data = RESPUESTAS_AUTOMATICAS.get(intencion_detectada)
-    
+
     if isinstance(respuesta_data, list):
         respuesta_automatica = random.choice(respuesta_data)
     elif isinstance(respuesta_data, str):
         respuesta_automatica = respuesta_data
-    else: 
+    else:
         respuesta_automatica = RESPUESTAS_AUTOMATICAS.get("FALLBACK", "Error interno de respuesta.")
-        
-    # LÓGICA DE TIP FINANCIERO 
-    tip_financiero = "" 
+
+    tip_financiero = ""
     if intencion_detectada in ["INVERSION_BOLSA", "AHORRO_PRESUPUESTO", "DEUDA_CREDITO"]:
         tips_list = RESPUESTAS_AUTOMATICAS.get("TIPS_FINANCIEROS", [])
         if tips_list and isinstance(tips_list, list):
-            # Aseguramos un separador para el tip financiero
             tip_financiero = f"\n\n---\n{random.choice(tips_list)}"
-        
 
-    # 3. Análisis de Sentimiento 
-    analysis_result, animo_key = analyze_sentiment_bert(user_text) 
+    # 3. Análisis de Sentimiento
+    analysis_result, animo_key = analyze_sentiment_bert(user_text)
 
-    # 4. Generación del Mensaje de Ánimo
+    # 4. Mensaje de ánimo para el usuario
     animo_list = RESPUESTAS_AUTOMATICAS.get(animo_key, [])
-    
     mensaje_animo = ""
     if animo_list and isinstance(animo_list, list):
-        # Aseguramos un separador para el mensaje de ánimo y seleccionamos uno al azar
         mensaje_animo = f"\n\n---\n{random.choice(animo_list)}"
-    
 
-    # Primer mensaje: La respuesta automática + Tip Financiero.
-    mensaje_intencion = (
-        f"{respuesta_automatica}"
-        f"{tip_financiero}" 
-    )
-
+    # ✅ El usuario SOLO recibe la respuesta útil
     await update.message.reply_text(
-        mensaje_intencion,
+        f"{respuesta_automatica}{tip_financiero}{mensaje_animo}",
         parse_mode='Markdown'
     )
-    
-    # Segundo mensaje: El análisis de sentimiento + Mensaje de Ánimo.
-    mensaje_sentimiento_completo = (
-        f"🧠 **Análisis de Sentimiento:**\n"
-        f"{analysis_result}"
-        f"{mensaje_animo}" 
-    )
 
-    await update.message.reply_text(
-        mensaje_sentimiento_completo,
-        parse_mode='Markdown'
-    )
+    # ✅ El análisis interno va solo al ADMIN
+    try:
+        await context.bot.send_message(
+            chat_id=ADMIN_CHAT_ID,
+            text=f"🔍 *NUEVO ANÁLISIS DE MENSAJE*\n"
+                 f"👤 Usuario: @{user.username} (ID: {user.id})\n"
+                 f"💬 Mensaje: {user_text}\n"
+                 f"🧠 Sentimiento:\n{analysis_result}\n"
+                 f"🎯 Intención detectada: {intencion_detectada}",
+            parse_mode='Markdown'
+        )
+    except Exception as e:
+        print(f"⚠ No se pudo enviar el análisis al admin: {e}")
 
 
 #  INICIO DEL BOT 

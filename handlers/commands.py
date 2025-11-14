@@ -1,7 +1,12 @@
+# handlers.commands.py
+
 from utils.image_analyzer import imagen_a_base64, describir_imagen_con_groq
-from config.config import bot
+from utils.analisis_sentimientos import analizar_sentimiento
+from config.config import bot,cargar_dataset
 from services.groq_service import respuesta_groq, transcribir_audio_groq
-from utils.nlp import buscar_mejor_respuesta, cargar_dataset
+from utils.logger import logger
+import os
+
 
 
 company_data = cargar_dataset()
@@ -60,9 +65,9 @@ def manejar_audio(message):
         bot.reply_to(message, "No pude transcribir el audio. Intenta nuevamente.")
         return
 
-    respuesta = buscar_mejor_respuesta(transcripcion, company_data)
-    if not respuesta:
-        respuesta = respuesta_groq(transcripcion, company_data)
+    # respuesta = buscar_mejor_respuesta(transcripcion, company_data)
+    # if not respuesta:
+    respuesta = respuesta_groq(transcripcion, company_data)
 
     if respuesta:
         bot.reply_to(message, respuesta)
@@ -70,21 +75,56 @@ def manejar_audio(message):
         bot.reply_to(message, "No pude generar una respuesta. Por favor, intenta más tarde.")
 
 
-@bot.message_handler(content_types=["text"])
+# @bot.message_handler(content_types=["text"])
 
+# def manejar_texto(message):
+#     bot.send_chat_action(message.chat.id, "typing")
+#     pregunta = message.text
+
+#     # respuesta = buscar_mejor_respuesta(pregunta, company_data)
+#     # if not respuesta:
+#     respuesta = respuesta_groq(pregunta, company_data)
+
+#     if respuesta:
+#         bot.reply_to(message, respuesta)
+#     else:
+#         bot.reply_to(message, "Lo siento, no pude procesar tu consulta. Intenta nuevamente.")
+
+
+@bot.message_handler(content_types=["text"])
 def manejar_texto(message):
     bot.send_chat_action(message.chat.id, "typing")
-    pregunta = message.text
+    user_text = message.text
+    user_name = message.from_user.username or "Usuario"
 
-    respuesta = buscar_mejor_respuesta(pregunta, company_data)
-    if not respuesta:
-        respuesta = respuesta_groq(pregunta, company_data)
-
+    respuesta = respuesta_groq(user_text, company_data)
     if respuesta:
         bot.reply_to(message, respuesta)
     else:
         bot.reply_to(message, "Lo siento, no pude procesar tu consulta. Intenta nuevamente.")
 
+    # --- 1️⃣ Analizar y registrar sentimiento ---
+    sentimiento = analizar_sentimiento(user_text)
+    logger.info(f"🧠 Análisis de sentimiento - Usuario: {user_name} | Sentimiento: {sentimiento}")
+
+    # --- 2️⃣ Enviar al admin (opcional) ---
+    ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID")
+    if ADMIN_CHAT_ID:
+        try:
+            bot.send_message(
+                ADMIN_CHAT_ID,
+                f"🔍 *ANÁLISIS DE MENSAJE*\n👤 @{user_name}\n💬 {user_text}\n🧠 {sentimiento}",
+                parse_mode="Markdown"
+            )
+        except Exception as e:
+            logger.warning(f"No se pudo enviar el análisis al admin: {e}")
+
+    # --- 3️⃣ Generar respuesta normalmente ---
+    respuesta = respuesta_groq(user_text, company_data)
+    if respuesta:
+        bot.reply_to(message, respuesta)
+    else:
+        bot.reply_to(message, "Lo siento, no pude procesar tu consulta. Intenta nuevamente.")
 
 @bot.message_handler(func=lambda msg: True)
 

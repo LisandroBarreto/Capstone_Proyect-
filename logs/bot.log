@@ -1,0 +1,162 @@
+2025-11-12 17:34:55 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2025-11-12 17:34:55 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-11-12 17:35:01 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 17:35:01 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 17:36:57 | INFO | BotLogger | 🧾 Analizando imagen recibida con Groq
+2025-11-12 17:36:59 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 17:44:18 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2025-11-12 17:44:18 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-11-12 17:44:23 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 17:44:23 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 17:44:32 | INFO | BotLogger | Analizando pregunta con Groq: hola
+2025-11-12 17:44:33 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 17:44:47 | INFO | BotLogger | Analizando pregunta con Groq: que es el amor?
+2025-11-12 17:44:47 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 17:44:47 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2025-11-12 17:44:53 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 17:45:32 | INFO | BotLogger | Analizando pregunta con Groq: que es el tiempo?
+2025-11-12 17:45:33 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 17:46:10 | INFO | BotLogger | Analizando pregunta con Groq: que te gusta hacer?
+2025-11-12 17:46:10 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 17:46:10 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2025-11-12 17:46:13 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 17:46:22 | INFO | BotLogger | Analizando pregunta con Groq: que es el arte?
+2025-11-12 17:46:22 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 17:46:22 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 29.000000 seconds
+2025-11-12 17:46:52 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 17:47:25 | INFO | BotLogger | Analizando pregunta con Groq: dame información sobre fiannzas
+2025-11-12 17:47:25 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 17:47:25 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+2025-11-12 17:47:33 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 17:47:51 | INFO | BotLogger | Analizando pregunta con Groq: como se opera un corazon?
+2025-11-12 17:47:51 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 17:47:51 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 21.000000 seconds
+2025-11-12 17:48:13 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 17:48:27 | INFO | BotLogger | Analizando pregunta con Groq: quien gano las elecciones en 2025?
+2025-11-12 17:48:27 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 17:48:27 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 25.000000 seconds
+2025-11-12 17:48:53 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 17:49:20 | INFO | BotLogger | 🧾 Analizando imagen recibida con Groq
+2025-11-12 17:49:22 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 21:47:26 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 21:47:26 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 21:49:17 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 21:49:17 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 21:49:17 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 21:50:15 | INFO | BotLogger | 📩 Mensaje recibido de @None: hola
+2025-11-12 21:54:58 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 21:54:58 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 21:54:58 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 21:55:06 | INFO | BotLogger | 📩 Mensaje recibido de @None: hola
+2025-11-12 22:04:44 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:04:44 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:04:44 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:04:56 | INFO | BotLogger | 📩 Mensaje recibido de @None: hola
+2025-11-12 22:05:34 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:05:34 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:05:34 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:05:42 | INFO | BotLogger | 📩 Mensaje recibido de @None: hola
+2025-11-12 22:08:11 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:08:11 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:08:11 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:08:16 | INFO | BotLogger | 📩 Mensaje recibido de @None: hola
+2025-11-12 22:18:17 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:18:17 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:18:17 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:18:58 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: hola
+2025-11-12 22:21:55 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:21:55 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:21:55 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:22:00 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: hola
+2025-11-12 22:22:19 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: odio los días soleados
+2025-11-12 22:22:34 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: amo las rosas blancas
+2025-11-12 22:22:47 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: estoy encantado perfectamente
+2025-11-12 22:22:58 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: gracias por la ayuda
+2025-11-12 22:23:09 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: muchísimas gracias por la ayuda
+2025-11-12 22:27:40 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:27:40 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:27:40 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:27:45 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: hola
+2025-11-12 22:29:39 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:29:39 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:29:39 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:29:39 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:29:39 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:30:22 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:30:22 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:30:22 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:30:22 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:30:22 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:34:31 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:34:31 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:34:31 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:34:31 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:34:31 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:35:48 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:35:48 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:35:48 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:35:48 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:35:48 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:35:54 | INFO | BotLogger | Sentimiento neutral 😐 (0.50)
+2025-11-12 22:36:17 | INFO | BotLogger | Sentimiento negativo 😟 (0.93)
+2025-11-12 22:46:51 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 22:46:51 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 22:46:51 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 22:47:05 | INFO | BotLogger | Analizando pregunta con Groq: hola
+2025-11-12 22:47:06 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 23:55:37 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-12 23:55:37 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-12 23:55:37 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-12 23:55:44 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.50)
+2025-11-12 23:55:44 | INFO | BotLogger | Analizando pregunta con Groq: hola
+2025-11-12 23:55:46 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 23:56:11 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.76)
+2025-11-12 23:56:11 | INFO | BotLogger | Analizando pregunta con Groq: que es el amor?
+2025-11-12 23:56:11 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 23:56:21 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.75)
+2025-11-12 23:56:21 | INFO | BotLogger | Analizando pregunta con Groq: te gusta el arte?
+2025-11-12 23:56:22 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 23:56:22 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 23.000000 seconds
+2025-11-12 23:56:45 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 23:56:58 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.82)
+2025-11-12 23:56:58 | INFO | BotLogger | Analizando pregunta con Groq: que es el tiempo?
+2025-11-12 23:56:58 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 23:56:58 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 26.000000 seconds
+2025-11-12 23:57:26 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 23:57:40 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.54)
+2025-11-12 23:57:40 | INFO | BotLogger | Analizando pregunta con Groq: quien te creo?
+2025-11-12 23:57:41 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 23:57:41 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 24.000000 seconds
+2025-11-12 23:58:05 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 12:59:28 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-14 12:59:28 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 12:59:28 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 12:59:58 | INFO | BotLogger | Analizando pregunta con Groq: hola
+2025-11-14 12:59:59 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 13:00:00 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.50)
+2025-11-14 13:00:00 | INFO | BotLogger | Analizando pregunta con Groq: hola
+2025-11-14 13:00:00 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 13:00:00 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2025-11-14 13:00:16 | INFO | BotLogger | Analizando pregunta con Groq: que podes hacer?
+2025-11-14 13:00:16 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 13:00:16 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2025-11-14 13:00:18 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 13:00:19 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 13:00:19 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 39.000000 seconds
+2025-11-14 13:00:35 | INFO | BotLogger | Analizando pregunta con Groq: que podes hacer?
+2025-11-14 13:00:35 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 13:00:35 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 23.000000 seconds
+2025-11-14 13:00:58 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 13:00:58 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 39.000000 seconds
+2025-11-14 13:00:59 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 13:00:59 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.81)
+2025-11-14 13:00:59 | INFO | BotLogger | Analizando pregunta con Groq: que podes hacer?
+2025-11-14 13:00:59 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 13:00:59 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 38.000000 seconds
+2025-11-14 13:01:38 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 13:01:38 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 40.000000 seconds
+2025-11-14 13:01:38 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 13:01:39 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.81)
+2025-11-14 13:01:39 | INFO | BotLogger | Analizando pregunta con Groq: que podes hacer?
+2025-11-14 13:01:39 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 13:01:39 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 39.000000 seconds

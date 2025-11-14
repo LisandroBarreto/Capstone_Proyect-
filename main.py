@@ -1,6 +1,9 @@
 import time
 from config.config import bot
 from handlers import commands  
+from utils.logger import log_startup_message
+
+log_startup_message()  # Muestra mensaje al iniciar
 
 if __name__ == "__main__":
     print("🤖 Bot de Telegram IA")
