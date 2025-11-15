@@ -1,10 +1,28 @@
-.env
+__pycache__/
+*.pyc
 
-TELEGRAM_TOKEN= ingrese su clave API de Telegram
+venv/
+env/
+ENV/
+.venv/
 
-GROQ_API_KEY= ingrese su clave API de Groq
+
 .env
-.env
+.env.local
+.env.*.local
+
 
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.log
+
+backup_mio/
+.vscode/
+.idea/
+
+
+*.bak
+.DS_Store
+Thumbs.db

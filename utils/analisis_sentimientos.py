@@ -1,9 +1,9 @@
+#utils/analisis_sentimientos.py
+
 from transformers import pipeline
 from utils.logger import logger
 
-# ==========================================
-# 🔹 CONFIGURACIÓN DEL MODELO DE SENTIMIENTO
-# ==========================================
+
 MODEL_NAME = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
 
 try:
@@ -18,9 +18,6 @@ except Exception as e:
     sentiment_pipeline = None
 
 
-# ==========================================
-# 🧠 FUNCIÓN DE ANÁLISIS DE SENTIMIENTO
-# ==========================================
 def analizar_sentimiento(text):
     """Analiza el sentimiento del texto y devuelve el resultado."""
     if sentiment_pipeline is None:

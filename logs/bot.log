@@ -1,162 +1,295 @@
-2025-11-12 17:34:55 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
-2025-11-12 17:34:55 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
-2025-11-12 17:35:01 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 17:35:01 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 17:36:57 | INFO | BotLogger | 🧾 Analizando imagen recibida con Groq
-2025-11-12 17:36:59 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 17:44:18 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
-2025-11-12 17:44:18 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
-2025-11-12 17:44:23 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 17:44:23 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 17:44:32 | INFO | BotLogger | Analizando pregunta con Groq: hola
-2025-11-12 17:44:33 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 17:44:47 | INFO | BotLogger | Analizando pregunta con Groq: que es el amor?
-2025-11-12 17:44:47 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-12 17:44:47 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 5.000000 seconds
-2025-11-12 17:44:53 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 17:45:32 | INFO | BotLogger | Analizando pregunta con Groq: que es el tiempo?
-2025-11-12 17:45:33 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 17:46:10 | INFO | BotLogger | Analizando pregunta con Groq: que te gusta hacer?
-2025-11-12 17:46:10 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-12 17:46:10 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 2.000000 seconds
-2025-11-12 17:46:13 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 17:46:22 | INFO | BotLogger | Analizando pregunta con Groq: que es el arte?
-2025-11-12 17:46:22 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-12 17:46:22 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 29.000000 seconds
-2025-11-12 17:46:52 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 17:47:25 | INFO | BotLogger | Analizando pregunta con Groq: dame información sobre fiannzas
-2025-11-12 17:47:25 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-12 17:47:25 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 6.000000 seconds
-2025-11-12 17:47:33 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 17:47:51 | INFO | BotLogger | Analizando pregunta con Groq: como se opera un corazon?
-2025-11-12 17:47:51 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-12 17:47:51 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 21.000000 seconds
-2025-11-12 17:48:13 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 17:48:27 | INFO | BotLogger | Analizando pregunta con Groq: quien gano las elecciones en 2025?
-2025-11-12 17:48:27 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-12 17:48:27 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 25.000000 seconds
-2025-11-12 17:48:53 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 17:49:20 | INFO | BotLogger | 🧾 Analizando imagen recibida con Groq
-2025-11-12 17:49:22 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 21:47:26 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 21:47:26 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 21:49:17 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 21:49:17 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 21:49:17 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 21:50:15 | INFO | BotLogger | 📩 Mensaje recibido de @None: hola
-2025-11-12 21:54:58 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 21:54:58 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 21:54:58 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 21:55:06 | INFO | BotLogger | 📩 Mensaje recibido de @None: hola
-2025-11-12 22:04:44 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:04:44 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:04:44 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:04:56 | INFO | BotLogger | 📩 Mensaje recibido de @None: hola
-2025-11-12 22:05:34 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:05:34 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:05:34 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:05:42 | INFO | BotLogger | 📩 Mensaje recibido de @None: hola
-2025-11-12 22:08:11 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:08:11 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:08:11 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:08:16 | INFO | BotLogger | 📩 Mensaje recibido de @None: hola
-2025-11-12 22:18:17 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:18:17 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:18:17 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:18:58 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: hola
-2025-11-12 22:21:55 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:21:55 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:21:55 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:22:00 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: hola
-2025-11-12 22:22:19 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: odio los días soleados
-2025-11-12 22:22:34 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: amo las rosas blancas
-2025-11-12 22:22:47 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: estoy encantado perfectamente
-2025-11-12 22:22:58 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: gracias por la ayuda
-2025-11-12 22:23:09 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: muchísimas gracias por la ayuda
-2025-11-12 22:27:40 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:27:40 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:27:40 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:27:45 | INFO | BotLogger | 📩 Mensaje recibido de @Usuario: hola
-2025-11-12 22:29:39 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:29:39 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:29:39 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:29:39 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:29:39 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:30:22 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:30:22 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:30:22 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:30:22 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:30:22 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:34:31 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:34:31 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:34:31 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:34:31 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:34:31 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:35:48 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:35:48 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:35:48 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:35:48 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:35:48 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:35:54 | INFO | BotLogger | Sentimiento neutral 😐 (0.50)
-2025-11-12 22:36:17 | INFO | BotLogger | Sentimiento negativo 😟 (0.93)
-2025-11-12 22:46:51 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 22:46:51 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 22:46:51 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 22:47:05 | INFO | BotLogger | Analizando pregunta con Groq: hola
-2025-11-12 22:47:06 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 23:55:37 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-12 23:55:37 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-12 23:55:37 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-12 23:55:44 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.50)
-2025-11-12 23:55:44 | INFO | BotLogger | Analizando pregunta con Groq: hola
-2025-11-12 23:55:46 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 23:56:11 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.76)
-2025-11-12 23:56:11 | INFO | BotLogger | Analizando pregunta con Groq: que es el amor?
-2025-11-12 23:56:11 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 23:56:21 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.75)
-2025-11-12 23:56:21 | INFO | BotLogger | Analizando pregunta con Groq: te gusta el arte?
-2025-11-12 23:56:22 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-12 23:56:22 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 23.000000 seconds
-2025-11-12 23:56:45 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 23:56:58 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.82)
-2025-11-12 23:56:58 | INFO | BotLogger | Analizando pregunta con Groq: que es el tiempo?
-2025-11-12 23:56:58 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-12 23:56:58 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 26.000000 seconds
-2025-11-12 23:57:26 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-12 23:57:40 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.54)
-2025-11-12 23:57:40 | INFO | BotLogger | Analizando pregunta con Groq: quien te creo?
-2025-11-12 23:57:41 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-12 23:57:41 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 24.000000 seconds
-2025-11-12 23:58:05 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-14 12:59:28 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
-2025-11-14 12:59:28 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
-2025-11-14 12:59:28 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
-2025-11-14 12:59:58 | INFO | BotLogger | Analizando pregunta con Groq: hola
-2025-11-14 12:59:59 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-14 13:00:00 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.50)
-2025-11-14 13:00:00 | INFO | BotLogger | Analizando pregunta con Groq: hola
-2025-11-14 13:00:00 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-14 13:00:00 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 18.000000 seconds
-2025-11-14 13:00:16 | INFO | BotLogger | Analizando pregunta con Groq: que podes hacer?
-2025-11-14 13:00:16 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-14 13:00:16 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 2.000000 seconds
-2025-11-14 13:00:18 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-14 13:00:19 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-14 13:00:19 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 39.000000 seconds
-2025-11-14 13:00:35 | INFO | BotLogger | Analizando pregunta con Groq: que podes hacer?
-2025-11-14 13:00:35 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-14 13:00:35 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 23.000000 seconds
-2025-11-14 13:00:58 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-14 13:00:58 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 39.000000 seconds
-2025-11-14 13:00:59 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-14 13:00:59 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.81)
-2025-11-14 13:00:59 | INFO | BotLogger | Analizando pregunta con Groq: que podes hacer?
-2025-11-14 13:00:59 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-14 13:00:59 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 38.000000 seconds
-2025-11-14 13:01:38 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-14 13:01:38 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 40.000000 seconds
-2025-11-14 13:01:38 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-14 13:01:39 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.81)
-2025-11-14 13:01:39 | INFO | BotLogger | Analizando pregunta con Groq: que podes hacer?
-2025-11-14 13:01:39 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-11-14 13:01:39 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 39.000000 seconds
+2025-11-14 19:31:48 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-14 19:31:49 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2025-11-14 19:31:49 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-11-14 19:31:52 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 19:31:52 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 19:34:36 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-14 19:34:36 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2025-11-14 19:34:36 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-11-14 19:34:39 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 19:34:39 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 19:34:58 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.50)
+2025-11-14 19:35:07 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.81)
+2025-11-14 20:16:53 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 20:16:53 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 20:17:05 | ERROR | TeleBot | Infinity polling exception: 'NoneType' object is not callable
+2025-11-14 20:17:05 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Proyecto_final\Capstone_Proyect\handlers\enseñanza.py", line 21, in activar_modo_aprender
+    contenido = cargar_info()
+                ^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not callable
+
+2025-11-14 20:18:07 | ERROR | TeleBot | Infinity polling exception: 'NoneType' object is not callable
+2025-11-14 20:18:07 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Proyecto_final\Capstone_Proyect\handlers\enseñanza.py", line 21, in activar_modo_aprender
+    contenido = cargar_info()
+                ^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not callable
+
+2025-11-14 20:21:19 | ERROR | TeleBot | Infinity polling exception: 'NoneType' object is not callable
+2025-11-14 20:21:19 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Proyecto_final\Capstone_Proyect\handlers\enseñanza.py", line 21, in activar_modo_aprender
+    contenido = cargar_info()
+                ^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not callable
+
+2025-11-14 20:28:53 | ERROR | TeleBot | Infinity polling: polling exited
+2025-11-14 20:28:53 | ERROR | TeleBot | Break infinity polling
+2025-11-14 20:29:12 | ERROR | TeleBot | Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2025-11-14 20:29:12 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Proyecto_final\Capstone_Proyect\handlers\enseñanza.py", line 23, in activar_modo_aprender
+    bot.send_message(
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1811, in send_message
+    apihelper.send_message(
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 282, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+
+2025-11-14 20:31:21 | ERROR | TeleBot | Infinity polling: polling exited
+2025-11-14 20:31:21 | ERROR | TeleBot | Break infinity polling
+2025-11-14 20:31:42 | ERROR | TeleBot | Break infinity polling
+2025-11-14 20:32:02 | ERROR | TeleBot | Break infinity polling
+2025-11-14 20:32:22 | ERROR | TeleBot | Break infinity polling
+2025-11-14 20:32:42 | ERROR | TeleBot | Break infinity polling
+2025-11-14 20:33:20 | ERROR | TeleBot | Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 3996
+2025-11-14 20:33:20 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Proyecto_final\Capstone_Proyect\handlers\enseñanza.py", line 37, in activar_modo_aprender
+    enviar_mensaje_largo(user_id, contenido)
+  File "c:\Proyecto_final\Capstone_Proyect\handlers\enseñanza.py", line 18, in enviar_mensaje_largo
+    bot.send_message(chat_id, texto[i:i+chunk_size], parse_mode="Markdown")
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1811, in send_message
+    apihelper.send_message(
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 282, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 3996
+
+2025-11-14 20:51:36 | ERROR | BotLogger | Error leyendo archivo: [Errno 2] No such file or directory: 'data/economia.txt'
+2025-11-14 20:52:55 | ERROR | TeleBot | Infinity polling: polling exited
+2025-11-14 20:52:55 | ERROR | TeleBot | Break infinity polling
+2025-11-14 20:53:09 | ERROR | TeleBot | Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2025-11-14 20:53:09 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Proyecto_final\Capstone_Proyect\handlers\enseñanza.py", line 51, in activar_modo_aprender
+    bot.send_message(
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1811, in send_message
+    apihelper.send_message(
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 282, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+
+2025-11-14 20:58:09 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:01:17 | INFO | BotLogger | Consultando Groq con mensaje: quiero herramientas y plataformas para invertir
+2025-11-14 21:01:17 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 21:01:17 | ERROR | BotLogger | Error Groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k635xg38eq5ajeafbya97nht` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 94479, Requested 8106. Please try again in 37m13.44s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-14 21:18:10 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 21:18:10 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 21:18:22 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:18:34 | INFO | BotLogger | Consultando Groq con mensaje: quiero herramientas y plataformas para invertir
+2025-11-14 21:18:34 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 21:18:34 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 10.000000 seconds
+2025-11-14 21:18:46 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:19:14 | INFO | BotLogger | Consultando Groq con mensaje: si
+2025-11-14 21:19:14 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 21:19:14 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 12.000000 seconds
+2025-11-14 21:19:27 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:21:24 | INFO | BotLogger | Consultando Groq con mensaje: quiero Guía de Consejos Financieros para Principiantes en Argentina
+2025-11-14 21:21:29 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:21:30 | ERROR | TeleBot | Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2025-11-14 21:21:30 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Proyecto_final\Capstone_Proyect\handlers\enseñanza.py", line 75, in manejar_modo_aprender
+    bot.send_message(user_id, respuesta)
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1811, in send_message
+    apihelper.send_message(
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 282, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lisandro\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+
+2025-11-14 21:25:45 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 21:25:45 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 21:25:55 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:26:16 | INFO | BotLogger | Consultando Groq con mensaje: Introducción a las Finanzas Personales
+2025-11-14 21:26:16 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 21:26:16 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2025-11-14 21:26:19 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:29:44 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 21:29:44 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 21:29:56 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:30:17 | INFO | BotLogger | Consultando Groq con mensaje: Control de Gastos y Reducción de Gastos Hormiga
+2025-11-14 21:30:17 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 21:30:17 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2025-11-14 21:30:21 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:32:37 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 21:32:37 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 21:34:03 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 21:34:03 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 21:34:27 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 21:34:27 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 21:37:32 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 21:37:32 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 21:37:54 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:38:20 | INFO | BotLogger | Consultando Groq con mensaje: Evaluación de Créditos y Endeudamiento
+2025-11-14 21:38:21 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:39:10 | INFO | BotLogger | Consultando Groq con mensaje: endeudamiento
+2025-11-14 21:39:11 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:39:38 | INFO | BotLogger | Consultando Groq con mensaje: aspectos fiscales
+2025-11-14 21:39:38 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 21:39:38 | ERROR | BotLogger | Error Groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ka2dvvykej58qr8nfz6etne6` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 92162, Requested 8181. Please try again in 4m56.352s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-14 21:41:54 | INFO | BotLogger | Consultando Groq con mensaje: Opciones de Inversión en Argentina
+2025-11-14 21:41:54 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 21:41:54 | ERROR | BotLogger | Error Groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ka2dvvykej58qr8nfz6etne6` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 92005, Requested 8185. Please try again in 2m44.16s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-14 21:43:03 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 21:43:03 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 21:43:20 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 21:43:20 | ERROR | BotLogger | Error generando resumen con Groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ka2dvvykej58qr8nfz6etne6` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 91906, Requested 8175. Please try again in 1m9.984s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-14 21:55:53 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-14 21:57:17 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-14 21:57:17 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2025-11-14 21:57:17 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-11-14 21:58:21 | INFO | BotLogger | ✅ Modelo BERT de sentimiento cargado correctamente.
+2025-11-14 21:58:21 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2025-11-14 21:58:21 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-11-14 21:58:24 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 21:58:24 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 21:58:42 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 21:59:21 | INFO | BotLogger | Analizando pregunta con Groq: /strat
+2025-11-14 21:59:22 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 21:59:22 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.43)
+2025-11-14 22:02:35 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 22:02:35 | ERROR | BotLogger | Error generando resumen con Groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ka2dvvykej58qr8nfz6etne6` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98891, Requested 8175. Please try again in 1h41m45.024s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-14 22:02:41 | INFO | BotLogger | Consultando Groq con mensaje: hola
+2025-11-14 22:02:41 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 22:02:41 | ERROR | BotLogger | Error Groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ka2dvvykej58qr8nfz6etne6` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98883, Requested 8179. Please try again in 1h41m41.568s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-14 22:02:51 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.50)
+2025-11-14 22:02:59 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: Sentimiento neutral 😐 (0.81)
+2025-11-14 22:18:10 | INFO | BotLogger | 🧾 Analizando imagen recibida con Groq
+2025-11-14 22:18:11 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 23:21:53 | ERROR | BotLogger | Error al cargar modelo de sentimiento: 
+ requires the protobuf library but it was not found in your environment. Check out the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+2025-11-14 23:21:53 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2025-11-14 23:21:53 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-11-14 23:21:57 | INFO | BotLogger | 🚀 BOT INICIADO CORRECTAMENTE
+2025-11-14 23:21:57 | INFO | BotLogger | 📂 Sistema de logging activo en logs/bot.log
+2025-11-14 23:22:35 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: ('Error: modelo no cargado', 'ANIMO_NEUTRAL')
+2025-11-14 23:22:50 | INFO | BotLogger | 🧾 Analizando imagen recibida con Groq
+2025-11-14 23:22:52 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 23:23:37 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-14 23:23:46 | INFO | BotLogger | Consultando Groq con mensaje: Checklist Práctico Antes de Invertir
+2025-11-14 23:23:46 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-14 23:23:46 | ERROR | BotLogger | Error Groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k635xg38eq5ajeafbya97nht` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 93062, Requested 8188. Please try again in 18m0s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-14 23:24:09 | INFO | BotLogger | 🧠 Análisis de sentimiento - Usuario: Usuario | Sentimiento: ('Error: modelo no cargado', 'ANIMO_NEUTRAL')
+2025-11-14 23:26:01 | ERROR | TeleBot | Infinity polling: polling exited
+2025-11-14 23:26:01 | ERROR | TeleBot | Break infinity polling

@@ -1,30 +1,55 @@
-# handlers.commands.py
+# handlers/commands.py
 
 from utils.image_analyzer import imagen_a_base64, describir_imagen_con_groq
 from utils.analisis_sentimientos import analizar_sentimiento
-from config.config import bot,cargar_dataset
+from config.config import bot,cargar_dataset, cargar_datos_economia
 from services.groq_service import respuesta_groq, transcribir_audio_groq
+from utils.nlp import buscar_mejor_respuesta, cargar_dataset
 from utils.logger import logger
 import os
 
 
-
+cargar_info = cargar_datos_economia()
 company_data = cargar_dataset()
-
+learning_mode = {}
 
 @bot.message_handler(commands=["start", "help"])
 def enviar_bienvenida(message):
     texto = """
-👋 ¡Hola! Soy un asistente inteligente.
+👋 ¡Hola! Soy AhorraBot 🤖, un asistente inteligente.
 
 ✅ Puedo:
-• Responder mensajes de texto
-• Escuchar y transcribir audios
+• Responder mensajes de texto con información específica
+• Escuchar y transcribir audios con información específica
 • Leer imágenes (tickets, facturas, comprobantes)
+• Realizar listas de gastos para ayudarle a administrar su dinero
+• Enseñarle sobre economía y finanzas basicas para que pueda tomar las mejores decisiones posibles
 
 📸 Solo enviame una imagen 🧾
 🎤 O un audio 🎙️
-📝 O escribime lo que necesites ✍️
+
+Si nececita ayuda para recordar los lo que puedo hacer solo ejecute /help
+
+Si quiere entrar en modo aprendizaje para que le enseñe algunas cosas de economía basica ejecute el siguiente comando:
+
+/aprender: Inicia el modo aprendizaje
+
+/salir: Sale del modo aprendizaje
+
+Si quiere que le ayude a crear una lista con sus gastos solo ejecute los siguientes comandos:
+
+/empezar_lista : Inicia el proceso para crear una nueva lista de compras con un presupuesto definido. 
+
+/ver_lista: Muestra un resumen de los productos y el estado del presupuesto para una lista existente
+
+/eliminar_lista: Inicia el proceso de borrar una lista de compras.
+
+/estadísticas: Genera un gráfico de torta con el gastos por categoría para la lista seleccionada
+
+/finalizar_lista: Finaliza la agregación de productos a la lista activa y muestra el resumen final
+
+/cancelar: Cancela cualquier proceso o conversación activa (ej. creación de lista, eliminación) 
+
 """
     bot.reply_to(message, texto)
 
@@ -65,8 +90,6 @@ def manejar_audio(message):
         bot.reply_to(message, "No pude transcribir el audio. Intenta nuevamente.")
         return
 
-    # respuesta = buscar_mejor_respuesta(transcripcion, company_data)
-    # if not respuesta:
     respuesta = respuesta_groq(transcripcion, company_data)
 
     if respuesta:
@@ -75,39 +98,26 @@ def manejar_audio(message):
         bot.reply_to(message, "No pude generar una respuesta. Por favor, intenta más tarde.")
 
 
-# @bot.message_handler(content_types=["text"])
-
-# def manejar_texto(message):
-#     bot.send_chat_action(message.chat.id, "typing")
-#     pregunta = message.text
-
-#     # respuesta = buscar_mejor_respuesta(pregunta, company_data)
-#     # if not respuesta:
-#     respuesta = respuesta_groq(pregunta, company_data)
-
-#     if respuesta:
-#         bot.reply_to(message, respuesta)
-#     else:
-#         bot.reply_to(message, "Lo siento, no pude procesar tu consulta. Intenta nuevamente.")
-
-
 @bot.message_handler(content_types=["text"])
+
 def manejar_texto(message):
     bot.send_chat_action(message.chat.id, "typing")
     user_text = message.text
     user_name = message.from_user.username or "Usuario"
+    pregunta = message.text
 
-    respuesta = respuesta_groq(user_text, company_data)
+    respuesta = buscar_mejor_respuesta(pregunta, company_data)
+    if not respuesta:
+        respuesta = respuesta_groq(pregunta, company_data)
+
     if respuesta:
         bot.reply_to(message, respuesta)
     else:
         bot.reply_to(message, "Lo siento, no pude procesar tu consulta. Intenta nuevamente.")
 
-    # --- 1️⃣ Analizar y registrar sentimiento ---
     sentimiento = analizar_sentimiento(user_text)
     logger.info(f"🧠 Análisis de sentimiento - Usuario: {user_name} | Sentimiento: {sentimiento}")
 
-    # --- 2️⃣ Enviar al admin (opcional) ---
     ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID")
     if ADMIN_CHAT_ID:
         try:
@@ -119,14 +129,4 @@ def manejar_texto(message):
         except Exception as e:
             logger.warning(f"No se pudo enviar el análisis al admin: {e}")
 
-    # --- 3️⃣ Generar respuesta normalmente ---
-    respuesta = respuesta_groq(user_text, company_data)
-    if respuesta:
-        bot.reply_to(message, respuesta)
-    else:
-        bot.reply_to(message, "Lo siento, no pude procesar tu consulta. Intenta nuevamente.")
 
-@bot.message_handler(func=lambda msg: True)
-
-def manejar_otros(message):
-    bot.reply_to(message, "No entiendo ese tipo de mensaje. Envíame texto, audio o una imagen. 👀")
